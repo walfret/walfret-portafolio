@@ -1,5 +1,5 @@
 import React from "react";
-import CreateAvatar from "../components/createAvatar";
+import CreateAvatar from "../components/CreateAvatar";
 import Layout from "../components/Layout";
 import styles from "../styles/JuegoApi.module.css";
 import Loader from "../components/Loader";

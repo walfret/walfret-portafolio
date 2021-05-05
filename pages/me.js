@@ -6,7 +6,7 @@ import Technologies from "../components/Technologies";
 import Contact from "../components/Contact";
 import ContactEmail from "../components/Contact-email";
 import Footer from "../components/Footer";
-import CreateAvatar from "../components/createAvatar";
+import CreateAvatar from "../components/CreateAvatar";
 
 const Me = () => {
   return (
