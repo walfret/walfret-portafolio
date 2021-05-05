@@ -1,0 +1,120 @@
+.container {
+  font-family: "Orbitron", sans-serif;
+}
+
+.gameApi {
+  text-align: center;
+  justify-self: center;
+}
+
+.gameApi h1 {
+  color: #5adafd;
+  margin: 80px 0px;
+}
+
+.characters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.characters section {
+  width: 180px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background: #5adafd;
+  border-radius: 0px 15px 0px 15px;
+}
+
+.characters section:hover,
+.characters section:focus,
+.characters section:active {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.characters p {
+  color: white;
+}
+
+.imgCharacter {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+}
+
+.buttonFetch {
+  width: 150px;
+  height: 70px;
+  font-family: "Orbitron";
+  font-size: 15px;
+  background: #5adafd;
+  color: white;
+  border: none;
+  border-radius: 15px;
+}
+
+.buttonFetch:hover,
+.buttonFetch:focus {
+  -webkit-transform: scale(+1.2);
+  -webkit-transform: scale(+1.2);
+  -ms-transform: scale(+1.2);
+  transform: scale(+1.2);
+  box-shadow: 2px 2px 5px 1px rgb(0 0 0 / 50%);
+}
+
+.inicioBtn {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 5px;
+  bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #282c34;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-image: url(/stars.svg);
+  background-size: 800px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.inicioBtn:hover,
+.inicioBtn:active,
+.inicioBtn:focus {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+  background-color: black;
+}
+
+.inicioBtn a {
+  bottom: 0;
+}
+
+.flecha {
+  transform: rotate(180deg);
+  width: 45px;
+  height: 45px;
+}
+
+@media screen and (max-width: 760px) {
+  .inicioBtn {
+    position: relative;
+  }
+
+  .gameApi h1 {
+    margin: 50px 0px -30px;
+  }
+
+  .characters section {
+    margin: 15px;
+  }
+}

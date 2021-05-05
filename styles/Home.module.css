@@ -1,122 +1,286 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  background: url(../public/astronauta-perdido-en-el-espacio-5498-1.png);
+  background-size: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  display: grid;
+  grid-template: 1fr 553px 1fr / 1fr 100vmax 1fr;
+  font-family: "DotGothic16";
+}
+
+.links {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  grid-row: 1/1;
+  grid-column: 1/4;
+  padding: 15px 0px;
+  position: relative;
+}
+
+.links figure {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
+.links figure p {
+  font-size: 25px;
+}
+
+.links a,
+.links nav {
+  width: 220px;
+  height: 60px;
+  margin-right: 30px;
+}
+
+.links section {
   display: flex;
-  flex-direction: column;
+}
+
+.links section nav div {
+  border-radius: 15px;
+  width: 220px;
+  height: 60px;
+  background: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  font-size: 22px;
+  box-shadow: 5px 5px 5px 5px rgba(32, 33, 36, 0.28);
+}
+
+.links section div a {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  position: relative;
+  top: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.links section div a:hover,
+.links section div a:active,
+.links section div a:focus {
+  color: #5adafd;
+}
+
+.links section nav div:hover,
+.links section nav div:active,
+.links section nav div:focus {
+  transform: scale(1.1);
+  background: url(../public/stars.svg) #282c34;
+  border: none;
+}
+
+.welcome {
+  grid-row: 2/2;
+  grid-column: 1/4;
+  align-self: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 0px;
+}
+
+.welcome h1 {
+  color: white;
+  font-size: 32px;
+}
+
+.downloadCv {
+  margin: 5px 0px 20px;
+}
+
+.downloadCv h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.downloadCv a {
+  padding: 15px 30px;
+  border-radius: 15px;
+  background: transparent;
+  border: 1px solid white;
+  font-size: 20px;
+  color: white;
+}
+
+.downloadCv a:hover,
+.downloadCv a:active,
+.downloadCv a:focus {
+  background: url(../public/stars.svg) #282c34;
+  border: none;
+  color: #5adafd;
+  font-size: 22px;
 }
 
 .footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  grid-row: 3/3;
+  grid-column: 1/4;
+  align-self: flex-end;
+  border-top: 1px solid white;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+.footer p {
+  align-self: flex-end;
+  padding: 8px;
 }
 
-.footer a {
+.codePage {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.redes a {
+  width: 50px;
+  height: 50px;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.redes a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  margin: 0px 10px 5px 0px;
+  filter: brightness(0.5);
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.git {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  filter: invert(0.8);
 }
 
-.title,
-.description {
-  text-align: center;
+.git:hover,
+.git:focus,
+.git:active {
+  transform: scale(1.2);
+  filter: invert(0);
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.redes a img:hover,
+.redes a img:active,
+.redes a img:focus {
+  transform: scale(1.2);
+  filter: brightness(1);
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+@media screen and (min-width: 1600px) {
+  .container {
+    background-size: 100%;
+    grid-template: 1fr 100vmax 1fr / 1fr 100vmax 1fr;
+    background-repeat: repeat;
+    background-position: initial;
+  }
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+@media screen and (max-width: 769px) {
+  .container {
+    grid-template: 1fr 575px 1fr / 1fr 700px 1fr;
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+
+  .redes {
+    flex-wrap: wrap;
+  }
+
+  .redes a img,
+  .git {
+    opacity: 1;
+  }
+
+  .codePage {
+    display: block;
+  }
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
+@media screen and (max-width: 426px) {
+  .container {
+    grid-template: 1fr 575px 1fr / 1fr 424px 1fr;
+    background-size: 1526px 100%;
+  }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
+  .links {
+    max-width: 425px;
+    border: none;
+  }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
+  .links section {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
+  .links section nav {
+    margin-top: 20px;
+    margin-right: 0;
+  }
 
-.logo {
-  height: 1em;
-}
+  .links figure img {
+    height: 60px;
+  }
 
-@media (max-width: 600px) {
-  .grid {
+  .links figure p {
+    font-size: 30px;
+    color: black;
+  }
+
+  .welcome {
+    height: 210px;
+    padding: 10px;
+  }
+
+  .welcome h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .downloadCv {
+    margin: 8px 0px;
+  }
+
+  .downloadCv h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .downloadCv a {
+    padding: 8px 30px;
+  }
+
+  .footer {
+    border: none;
+    display: block;
+  }
+
+  .redes {
     width: 100%;
-    flex-direction: column;
+    text-align: initial;
+  }
+
+  .redes a img {
+    filter: grayscale(0);
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    grid-template: 1fr 570px 1fr / 1fr 300px 1fr;
+    background-size: 1526px 100%;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .container {
+    grid-template: 1fr 595px 1fr / 1fr 319px 1fr;
+    background-size: 1526px 100%;
   }
 }

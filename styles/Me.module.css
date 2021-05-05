@@ -1,0 +1,44 @@
+.container {
+  font-family: "Orbitron", sans-serif;
+}
+
+.container_button {
+  display: grid;
+  grid-template: 50px / 1fr 80px 1fr;
+  position: relative;
+}
+
+.buttonFlecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #282c34;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  grid-row: 1 / 1;
+  grid-column: 2 / 2;
+  position: relative;
+  bottom: 40px;
+  background-image: url(/stars.svg);
+  background-size: 800px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.buttonFlecha:hover {
+  transform: translateY(-8px);
+  background-color: black;
+}
+
+.buttonFlecha img {
+  color: white;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 426px) {
+  .container_button {
+    display: none;
+  }
+}

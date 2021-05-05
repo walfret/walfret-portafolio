@@ -1,0 +1,95 @@
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+.navWords {
+  color: white;
+  text-decoration: none;
+  margin-right: 50px;
+  font-size: 25px;
+  position: relative;
+  display: flex;
+}
+
+.dropNav {
+  color: white;
+  padding: 10.2px;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: block;
+  position: absolute;
+  background-color: #5adafd;
+  min-width: 100px;
+  border-radius: 0px 10px 0px 10px;
+  z-index: 1;
+  left: 0px;
+}
+
+.dropdownContent a {
+  padding: 10px;
+  display: none;
+  color: white;
+}
+
+.dropNav:hover,
+.dropNav:focus,
+.dropNav:active {
+  transition: all 0.2s ease-in-out 0s;
+  background-color: #5adafd;
+  border-radius: 0px 10px 0px 10px;
+}
+
+.dropNav:hover .dropdownContent a {
+  display: block;
+  animation-name: topToBottom;
+  animation-duration: 400ms;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 769px) {
+  .dropNav {
+    font-size: 32px;
+    position: relative;
+    left: 20px;
+  }
+
+  .dropNav:hover,
+  .dropNav:focus,
+  .dropNav:active {
+    background-color: #282c34;
+    background-image: url("/stars.svg");
+    color: #5adafd;
+  }
+
+  .dropdownContent a {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .dropdownContent a {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .dropdownContent a {
+    font-size: 23.3px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .dropdownContent a {
+    font-size: 19.5px;
+  }
+}

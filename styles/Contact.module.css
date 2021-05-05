@@ -1,0 +1,168 @@
+.contact {
+  text-align: center;
+  display: grid;
+  grid-template: 10px 100px 160px 160px 160px 160px 160px 20px / 1fr 380px 380px 1fr;
+}
+
+.contactTitle {
+  grid-row: 2/2;
+  grid-column: 1/5;
+  justify-self: center;
+  align-self: center;
+  color: #5adafd;
+}
+
+.c01 {
+  grid-row: 3/3;
+  grid-column: 2/2;
+}
+.c02 {
+  grid-row: 3/3;
+  grid-column: 3/3;
+}
+.c03 {
+  grid-row: 4/4;
+  grid-column: 2/2;
+}
+.c04 {
+  grid-row: 4/4;
+  grid-column: 3/3;
+}
+.c05 {
+  grid-row: 5/5;
+  grid-column: 2/2;
+}
+.c06 {
+  grid-row: 5/5;
+  grid-column: 3/3;
+}
+.c07 {
+  grid-row: 6/6;
+  grid-column: 2/2;
+}
+.c08 {
+  grid-row: 6/6;
+  grid-column: 3/3;
+}
+
+.c01,
+.c02,
+.c03,
+.c04,
+.c05,
+.c06,
+.c07,
+.c08 {
+  width: 350px;
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 22px;
+  margin: 10px;
+  text-align: center;
+  border: 3px solid #282c34;
+  border-radius: 10px;
+  background: url(/stars.svg) #282c34;
+  color: #5adafd;
+}
+.c01:hover,
+.c02:hover,
+.c03:hover,
+.c04:hover,
+.c05:hover,
+.c06:hover,
+.c07:hover,
+.c08:hover {
+  border: 3px solid #5adafd;
+  box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.c01 img,
+.c02 img,
+.c03 img,
+.c04 img,
+.c05 img,
+.c06 img,
+.c07 img,
+.c08 img {
+  width: 60px;
+}
+.c01 h2,
+.c02 h2,
+.c03 h2,
+.c04 h2,
+.c05 h2,
+.c06 h2,
+.c07 h2,
+.c08 h2 {
+  color: #fff;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 769px) {
+  .contact {
+    grid-template: 10px 100px 160px 160px 160px 160px 160px 20px / 1fr 320px 320px 1fr;
+  }
+
+  .c01,
+  .c02,
+  .c03,
+  .c04,
+  .c05,
+  .c06,
+  .c07,
+  .c08 {
+    width: 295px;
+    margin: 0;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .c01 div h1,
+  .c02 div h1,
+  .c03 div h1,
+  .c04 div h1,
+  .c05 div h1,
+  .c06 div h1,
+  .c07 div h1,
+  .c08 div h1 {
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .contact {
+    grid-template: 10px 100px 160px 160px 160px 160px 160px 160px 160px 20px / 1fr 300px 1fr;
+  }
+
+  .c01 {
+    grid-row: 3/3;
+    grid-column: 2/2;
+  }
+  .c05 {
+    grid-row: 4/4;
+    grid-column: 2/2;
+  }
+  .c03 {
+    grid-row: 5/5;
+    grid-column: 2/2;
+  }
+  .c06 {
+    grid-row: 6/6;
+    grid-column: 2/2;
+  }
+  .c08 {
+    grid-row: 7/7;
+    grid-column: 2/2;
+  }
+  .c04 {
+    grid-row: 8/8;
+    grid-column: 2/2;
+  }
+  .c02 {
+    grid-row: 9/9;
+    grid-column: 2/2;
+  }
+}
