@@ -16,7 +16,7 @@ const ContactEmail = () => {
   async function onSubmitForm(values) {
     let config = {
       method: "post",
-      url: process.env.ROUTE_EMAIL,
+      url: "https://walfret-portafolio.herokuapp.com/api/email",
       headers: {
         "Content-Type": "application/json",
       },
