@@ -16,7 +16,7 @@ const ContactEmail = () => {
   async function onSubmitForm(values) {
     let config = {
       method: "post",
-      url: "http://192.168.1.70:3000/api/email",
+      url: `${process.env.ROUTE_EMAIL}/api/email`,
       headers: {
         "Content-Type": "application/json",
       },
