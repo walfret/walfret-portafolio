@@ -14,7 +14,6 @@ const ContactEmail = () => {
   const router = useRouter();
 
   async function onSubmitForm(values) {
-    console.log("esta es la var entorno", process.env.EMAIL_URLLOCAL);
     let config = {
       method: "post",
       url: "https://walfret-portafolio.herokuapp.com/api/email",
