@@ -16,7 +16,7 @@ const ContactEmail = () => {
   async function onSubmitForm(values) {
     let config = {
       method: "post",
-      url: "https://walfret-portafolio.herokuapp.com/api/email",
+      url: `http://localhost:3000/api/email`,
       headers: {
         "Content-Type": "application/json",
       },
