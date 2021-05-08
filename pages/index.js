@@ -53,7 +53,7 @@ const Home = () => {
         </div>
         <div className={styles.codePage}>
           <p>El codigo de esta pagina esta aqui:</p>
-          <a href="/https://github.com/walfret/walfret-portafolio">
+          <a href="https://github.com/walfret/walfret-portafolio">
             <img className={styles.git} src="/github-blanco.svg" alt="Github" />
           </a>
         </div>
