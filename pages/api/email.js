@@ -7,14 +7,14 @@ export default async (req, res) => {
   const transporter = nodemailer.createTransport({
     host: "smtp.office365.com",
     port: 587,
-    secure: false,
+    secure: true,
     auth: {
       user: process.env.TRANSPORTER_EMAIL,
       pass: process.env.TRANSPORTER_PASS,
     },
-    tls: {
+    /*  tls: {
       rejectUnauthorized: false,
-    },
+    }, */
   });
 
   const contentHTML = `
