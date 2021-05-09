@@ -40,7 +40,7 @@ const ContactEmail = () => {
       <h1>Contactame Y Hagamos Grandes Proyectos</h1>
       <h2>Mandame un mensaje y tus datos para contactarnos</h2>
       <div className={styles.formMessage}>
-        <form action="/api/email" onSubmit={handleSubmit(onSubmitForm)}>
+        <form onSubmit={handleSubmit(onSubmitForm)}>
           <div>
             <p>Escribe tu nombre &darr;</p>
             <input
