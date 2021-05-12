@@ -9,9 +9,8 @@ export default async (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      type: "OAuth2",
       user: process.env.TRANSPORTER_EMAIL,
-      accessToken: process.env.TRANSPORTER_PASS,
+      pass: process.env.TRANSPORTER_PASS,
     },
   });
 

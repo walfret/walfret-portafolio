@@ -2,8 +2,13 @@ import styles from "../styles/ContactEmail.module.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Modal from "./Modal";
+import { useState } from "react";
 
 const ContactEmail = () => {
+  const [show, setShow] = useState(false);
+  const [state, setState] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -16,7 +21,7 @@ const ContactEmail = () => {
   async function onSubmitForm(values) {
     let config = {
       method: "post",
-      url: "https://walfret-portafolio.herokuapp.com/api/email",
+      url: "http://localhost:3000/api/email",
       headers: {
         "Content-Type": "application/json",
       },
@@ -25,11 +30,13 @@ const ContactEmail = () => {
 
     try {
       const response = await axios(config);
-      console.log(response);
       if (response.status === 200) {
-        console.log("Success");
         reset();
-        router.push("/me");
+        setState(!state);
+        setShow(!show);
+      } else if (response.status === !200) {
+        console.log(error.response ? error.response : error);
+        setShow(!show);
       }
     } catch (error) {
       console.error(error);
@@ -38,6 +45,32 @@ const ContactEmail = () => {
 
   return (
     <div className={styles.sendEmail}>
+      <Modal show={show}>
+        <button
+          type="button"
+          onClick={() => {
+            setShow(!show);
+          }}
+        >
+          X
+        </button>
+        {state === true ? (
+          <div>
+            <h1>Tu mensaje fue enviado exitosamente a:</h1>
+            <p>walfret69@gmail.com</p>
+            <p>Espera mi mensaje para ponernos en contacto</p>
+          </div>
+        ) : (
+          <div>
+            <h1>Tu mensaje no pudo ser enviado</h1>
+            <p>Intenta enviar tu mensaje mas tarde, o recargar la pagina</p>
+            <p>Puedes contactarme por mis redes sociales</p>
+            <a style={{ color: "white" }} href="#contact">
+              Pulsa aqui para ver mis redes
+            </a>
+          </div>
+        )}
+      </Modal>
       <h1>Contactame Y Hagamos Grandes Proyectos</h1>
       <h2>Mandame un mensaje y tus datos para contactarnos</h2>
       <div className={styles.formMessage}>

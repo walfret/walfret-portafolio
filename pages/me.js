@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Technologies from "../components/Technologies";
 import Contact from "../components/Contact";
-import ContactEmail from "../components/Contact-email";
+import ContactEmailHeroku from "../components/ContactEmail-forHeroku";
 import Footer from "../components/Footer";
 import CreateAvatar from "../components/CreateAvatar";
 
@@ -22,7 +22,7 @@ const Me = () => {
         <About />
         <Technologies />
         <Contact />
-        <ContactEmail />
+        <ContactEmailHeroku />
         <Footer />
         <CreateAvatar />
       </div>

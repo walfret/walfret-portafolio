@@ -5,7 +5,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 const HeaderMe = ({ children }) => {
-  const [show, setShow] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <>
@@ -24,19 +24,19 @@ const HeaderMe = ({ children }) => {
         <i
           className={navigation.burgerBtn}
           onClick={() => {
-            setShow(!show);
+            setShowMenu(!showMenu);
           }}
         >
           <p
             className={navigation.cerrarModal}
-            style={{ display: show === true ? "flex" : "none" }}
+            style={{ display: showMenu === true ? "flex" : "none" }}
           >
             X
           </p>
         </i>
         <div
           className={navigation.menu}
-          style={{ bottom: show === true ? 0 : "-550vw" }}
+          style={{ bottom: showMenu === true ? 0 : "-550vw" }}
         >
           <nav>
             <Link href="/">
