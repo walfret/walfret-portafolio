@@ -5,7 +5,7 @@
   background-position: center;
   text-align: center;
   display: grid;
-  grid-template: 1fr 553px 1fr / 1fr 100vmax 1fr;
+  grid-template: 1fr 100vmax 1fr / 1fr 100vmax 1fr;
   font-family: "DotGothic16";
 }
 
@@ -180,12 +180,12 @@
 }
 
 @media screen and (max-width: 769px) {
-  .container {
-    grid-template: 1fr 575px 1fr / 1fr 700px 1fr;
-  }
-
   .links {
     flex-wrap: wrap;
+  }
+
+  .links section {
+    margin-left: 15px;
   }
 
   .redes {
@@ -202,14 +202,9 @@
   }
 }
 
-@media screen and (max-width: 426px) {
-  .container {
-    grid-template: 1fr 575px 1fr / 1fr 424px 1fr;
-    background-size: 1526px 100%;
-  }
-
+@media screen and (max-width: 700px) {
   .links {
-    max-width: 425px;
+    padding: 0;
     border: none;
   }
 
@@ -220,8 +215,49 @@
   }
 
   .links section nav {
+    margin-top: 0;
+    margin-right: 15px;
+  }
+
+  .linkJuego {
+    position: relative;
+    top: 15px;
+  }
+}
+
+@media screen and (max-width: 606px) {
+  .footer p {
+    padding: 0;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    border: none;
+  }
+
+  .redes {
+    text-align: initial;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .container {
+    grid-template: 1fr 570px 1fr / 1fr 400px 1fr;
+    background-size: 1526px 100%;
+  }
+  .links section nav {
     margin-top: 20px;
-    margin-right: 0;
+    margin-right: 10px;
+  }
+
+  .linkJuego {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .links {
+    max-width: 425px;
   }
 
   .links figure img {
@@ -257,13 +293,12 @@
   }
 
   .footer {
-    border: none;
     display: block;
   }
 
   .redes {
-    width: 100%;
-    text-align: initial;
+    width: 95%;
+    margin-left: 15px;
   }
 
   .redes a img {
@@ -282,5 +317,15 @@
   .container {
     grid-template: 1fr 595px 1fr / 1fr 319px 1fr;
     background-size: 1526px 100%;
+  }
+
+  .welcome {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 377px) {
+  .container {
+    grid-template: 1fr 575px 1fr / 1fr 98% 1fr;
   }
 }

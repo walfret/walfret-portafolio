@@ -28,7 +28,7 @@ const Home = () => {
               </div>
             </Link>
           </nav>
-          <nav>
+          <nav className={styles.linkJuego}>
             <Link href="/juego-api">
               <div>
                 <a>Juego con api</a>
