@@ -10,11 +10,12 @@ const About = () => {
         </div>
         <p>
           Hola! Soy desarrollador web, tengo 2 años de experiencia en
-          tecnologias como: HTML5, CSS3, Javascript, Node.js, React.js, React
-          routers, Redux, Next.js, Nest.js, Rest API, Github, MySQL, MongoDb,
-          Express, etc... y busco trabajar como freelance. Tengo 25 años, amo la
-          tecnologia, tengo muchas ganas de trabajar en cualquier proyecto, me
-          encanta desarrollar proyectos de todo tipo y nunca parar de aprender!
+          tecnologias como: HTML5, CSS3, Javascript, Typescript, Node.js,
+          React.js, React routers, Redux, Next.js, Nest.js, Rest API, Github,
+          MySQL, MongoDb, Express, etc... y busco trabajar como freelance. Tengo
+          25 años, amo la tecnologia, tengo muchas ganas de trabajar en
+          cualquier proyecto, me encanta desarrollar proyectos de todo tipo y
+          nunca parar de aprender!!
         </p>
         <div className={styles.buttonsAbout}>
           <a

@@ -326,6 +326,6 @@
 
 @media screen and (min-width: 377px) {
   .container {
-    grid-template: 1fr 575px 1fr / 1fr 98% 1fr;
+    grid-template: 1fr 73.5vh 1fr / 1fr 98% 1fr;
   }
 }
